@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SideBar from "../SideBar/SideBar";
 import SinglePlayer from "../SinglePlayer/SinglePlayer";
 import "./Players.css";
 
@@ -13,10 +14,15 @@ const Players = () => {
       .then((data) => setPlayers(data));
   }, []);
   return (
-    <div className="all-player">
-      {players.map((player) => (
-        <SinglePlayer player={player}></SinglePlayer>
-      ))}
+    <div>
+      <div className="players-container">
+        {players.map((player) => (
+          <SinglePlayer player={player}></SinglePlayer>
+        ))}
+      </div>
+      {/* <div className="cart-container">
+        <h2>Rufaida</h2>
+      </div> */}
     </div>
   );
 };

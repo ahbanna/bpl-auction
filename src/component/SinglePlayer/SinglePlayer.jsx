@@ -1,9 +1,10 @@
 import React from "react";
+import "./SinglePlayer.css";
 
 const SinglePlayer = (props) => {
   const { price, picture, name, job, age, about } = props.player;
   return (
-    <div>
+    <div className="single-player card">
       <img src={picture} alt="" />
       <h3>{name}</h3>
       <p>Age: {age}</p>
